@@ -32,6 +32,7 @@ public class UserController {
     //single user get
     int retryCount = 1;
     @GetMapping("/{userId}")
+
     //@CircuitBreaker(name = "ratingHotelBreaker",fallbackMethod = "ratingHotelFallback")
     //@Retry(name = "ratingHotelService",fallbackMethod = "ratingHotelFallback")
     @RateLimiter(name = "userRateLimiter",fallbackMethod = "ratingHotelFallback")
